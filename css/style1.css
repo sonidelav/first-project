@@ -1,0 +1,329 @@
+/* 
+    Document   : style1
+    Created on : Oct 23, 2012, 2:47:21 PM
+*/
+
+html {
+    padding: 0px; margin: 0px; font-family: 'Segoe UI';
+    /*background-color:#007ACC;*/ font-size:100%;
+    /*background-color: #33335C;*/ color:white;
+    background: #27538A;
+    position:fixed; top:0px; bottom:0px; left:0px; right:0px;
+}
+a:active, a:visited, a {color: #007ACC;}
+
+#answersForm{
+    position: absolute; display: block; 
+    left:0px; right:0px; bottom:0px; top:0px;
+}
+
+.answer {
+    margin: 1% 0px 1% 0px;
+    position:relative;
+}
+.answer label {
+    position: absolute; font-size: 14pt; display:block; /*background-color: #22225C;*/
+    background-color: #10397A;
+    width:80%; margin-left:-40%; left:50%; text-align: center; top:0px; bottom:0px;
+}
+.answer label input {display:none;}
+.answer label:hover {cursor:pointer;}
+.answer label span {position:relative; display:block;}
+
+.correctAnswer {background-color: #007ACC;}
+
+#TextContainer { 
+    position:absolute; left:2px; right:2px; top:2px; bottom:2px; 
+    padding-left:10px; padding-right: 10px;
+    overflow-style: scrollbar; overflow: auto;
+}
+
+/* Answers Container Style */
+#AnswerContainer {
+    right:0px; top:70px; bottom: 10px; left:50%; position: absolute;
+}
+
+#AnswerContainerMono{
+    top:70px; bottom: 10px; position: absolute;
+    left: 50%; margin-left:-40%; width:80%;
+}
+
+#MediaContainer {
+    left:0px; top:70px; bottom:10px; right:50%;
+    position:absolute; overflow-style: scrollbar; overflow: auto;
+}
+
+#MediaContainer > img {
+   position:absolute; left:5%;top:5%;
+}
+#MediaContainer > span{
+    position:absolute;left:10%;width:80%;top:50%;
+} 
+#MediaContainer > audio {
+    position:absolute;left:10%;width:80%;top:50%;
+}
+
+#MediaContainer .FileContainer {
+    float:left;width:100%;height:50%;
+}
+
+#MediaContainerMono {
+    left:2%; top:70px; bottom:10px; right: 2%; position:absolute;
+}
+#MediaContainerMono img {
+    height: 100%; left:25%; position:relative;
+}
+
+#MediaContainerMono img:hover {cursor: pointer;}
+
+#FillGapsContainer {
+    position:absolute;
+    top:70px;
+    bottom:10px;
+    left:0px; right:0px;
+    line-height: 3em;
+    overflow:auto;
+    padding:0px 2%;
+    overflow-style: move;
+}
+
+#FillGapsContainer input {
+    border:solid 1px white;
+    border-radius: 4px 4px;
+    padding:5px;
+    text-align:center;
+    /*background-color: #22225C;*/
+    background-color: #10397A;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: limegreen;
+}
+
+#FillGapsContainer #fillgapstext {
+    position:absolute;left:0px;top:0px;bottom:0px;right:50%;
+    padding:0px 2%; overflow:auto; overflow-style: scrollbar;
+}
+#FillGapsContainer #fillgapsfile {
+    position:absolute;left:50%;top:0px;bottom:0px;right:0px;
+}
+
+#MatchingContainer {
+    position:absolute;
+    top:70px;
+    bottom:10px;
+    left:5%;right:5%;
+}
+#MatchingContainer #board {
+    float:left;
+    height:80%;
+    width:100%;
+}
+#MatchingContainer #board #wraper {
+    width:80%;
+    height:100%;
+    left:10%;
+    position:relative;
+}
+#MatchingContainer #board div {
+    float:left; 
+    height:20%;
+}
+#MatchingContainer #board .text {
+    width:78%;
+}
+#MatchingContainer #board .dropBox {
+    width:20%;
+    /*background:#22224B;*/
+    background:#10397A;
+    margin-bottom: 8px;
+    box-shadow: inset 2px 2px 8px 0px black;
+    border:inset 2px #22225C;
+}
+#MatchingContainer #answers {
+    float:left;
+    width:100%;
+    height:20%;
+}
+#MatchingContainer #answers .dragBox {
+    display:block;
+    width:20%;
+    height:90%;
+    border:solid 1px white;
+    float:left;
+    background:#007ACC;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.dragBox p {margin:0px;padding:0px;text-align:center;}
+.text p {margin:0px;padding:0px;text-align: left;}
+
+#MatchingContainer #answers.dropBox {
+    /*background:#22224B;*/
+    background-color: #10397A;
+    box-shadow: inset 2px 2px 8px 0px black;
+    border:solid 2px #22225C;
+    overflow: auto;
+}
+#MatchingContainer #board #wraper .dragBox, #MatchingContainer #board .dragBox 
+{
+    background:#007ACC;
+    width:100%;height:100%;
+    border:inset 1px white;
+    display:block;
+    cursor: pointer;
+}
+#MatchingContainer #board .dropGroup {
+    width:50%; height:100%;
+    text-align: center;
+}
+#MatchingContainer #board .dropGroup .dropBox {
+    width:60%; clear:both;
+}
+#MatchingContainer #board .dropGroup p {
+    margin:0px; padding:0px 0px 1% 0px;
+    font-size:14pt;
+}
+
+/*
+    DRAG N DROP
+*/
+#DND {
+    left:2%; top:70px; 
+    bottom:10px; right: 2%;
+    position:absolute;
+}
+
+#DND #background_container {
+    position: absolute;
+    left: 0px;
+    right: 50%;
+    bottom: 42px;
+    top: 0px;
+}
+
+#DND #pictures_container {
+    position: absolute;
+    right:0px;
+    left:50%;
+    bottom:42px;
+    top:0px;
+    overflow: auto;
+    padding:20px;
+}
+
+#DND #pictures_container img {
+    padding:10px;
+}
+
+#DND #pictures_container img:hover {
+    cursor: pointer;
+}
+
+#DND #pictures_container img.moveable {
+    opacity:0.7;
+    cursor: move;
+    z-index:99999;
+}
+
+#DND #pictures_container img.moved {
+    z-index:9999;
+}
+
+#DND #sound_container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 32px;
+}
+
+#DND #sound_container > audio {
+    position:absolute;
+    left:10%;
+    width:80%;
+}
+
+/*
+    FILL THE COLOR
+*/
+#FTC {
+    left:2%; top:70px; 
+    bottom:10px; right: 2%;
+    position:absolute;
+}
+
+#FTC #draw_container {
+    position: absolute;
+    left: 0px;
+    right: 20%;
+    bottom: 42px;
+    top: 0px;
+}
+
+#FTC #palete_container {
+    position: absolute;
+    right:0px;
+    left:80%;
+    bottom:42px;
+    top:0px;
+    overflow: auto;
+}
+
+#FTC #sound_container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 32px;
+}
+
+#FTC #sound_container > audio {
+    position:absolute;
+    left:10%;
+    width:80%;
+}
+
+#FTC .color_box {
+    width:64px; height:64px;
+    float:left; margin: 5px 0px 0px 5px;
+}
+
+
+#FeedTitle {
+    position:fixed; top:0px; left:0px; right:0px; height: 64px; color:white;
+    /* background-color: #22225C; */ z-index: 100;
+    background-color:#16499A;
+}
+#FeedTitle th {text-align: center; height:64px;}
+#FeedTitle table {width:100%;}
+
+#FeedDiv {
+    position:fixed; top:64px; left:0px; right:0px; bottom:128px;
+    color:white; overflow-style: scrollbar; overflow: auto; /*background-color: #33335C*/;
+}
+#FeedDiv table {width: 100%; text-align: center; margin: 10px 0px;}
+
+#FeedTable td {height:64px;}
+#FeedTable button {/*background-color: #22225C;*/ background-color:#16499A; color: white; border:none; width: 90%; height:64px;}
+#FeedTable form {height:64px;overflow: hidden;}
+#FeedTable button:hover {/*background-color: #007ACC;*/ background-color:#1B58B8; color: white; cursor: pointer;}
+.answered {background-color: #1B58B8; color: white; font-weight: bold;}
+.ignored {background-color: yellow; color: black; font-weight: bold;}
+.notanswered {background-color: darkgrey; color: white; font-weight: bold;}
+.QFeedScore.correct {background:green;}
+.QFeedScore.wrong {background:red;}
+.QFeedText {width:60%;vertical-align:middle;}
+.QFeedStatus {width:10%;text-align:center;vertical-align:middle;}
+.QFeedNo{width:10%;}
+.QFeedID{width:10%;}
+.QFeedScore{width:10%;}
+
+/* Questions Title Style */
+#title {
+    text-align: center; margin: 0px; position: fixed;
+    top:0px; left: 0px; right:0px; font-size: 22px;
+    /*background-color: #22225C;*/ color: white;
+    background-color:#10397A;
+}
+#title p {padding:0px;margin-top:15px;}

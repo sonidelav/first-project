@@ -1,0 +1,272 @@
+/* 
+    Document   : style2.css
+    Created on : Oct 23, 2012, 4:37:14 PM
+*/
+
+/* Elements */
+button{
+    background-color: transparent; color: white; border:none;
+}
+
+button:hover, button:active {
+    background-color: transparent; color: white;
+}
+
+button, button span :hover {cursor: pointer;}
+
+input[type='text'], input[type='password'] {
+    /*background-color: #33335C;*/ color: white;
+    border:solid 2px white;padding:8px;
+    border-radius: 16px 16px;
+    /*background-color: #10397A;*/
+    background: #27538A;
+}
+
+/* this is not work before IE9 */
+body:last-child .box-shadow {filter:none;}
+
+/* Classes */
+.box-shadow {
+    box-shadow: 0px 0px 8px 4px black;
+    -moz-box-shadow: 0px 0px 8px 4px black;
+    -webkit-box-shadow: 0px 0px 8px 4px black;
+    
+    /* IE7 - IE8 */
+    filter:
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=0,strength=5),
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=90,strength=5),
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=180,strength=5),
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=240,strength=5);
+}
+.box-shadow-down-ie {
+    filter:
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=180,strength=5);
+}
+.box-shadow-up-ie {
+    filter:
+        progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=0,strength=5);
+}
+
+.fadeLine {
+    height:1px; display:block;
+    background: -moz-linear-gradient(left, transparent, white, transparent);
+    background: -webkit-linear-gradient(left, transparent, white, transparent);
+    background: -ms-linear-gradient(left, transparent, white, transparnet);
+    background: linear-gradient(to right, transparent, white, transparent);
+    /* IE 8 */
+    filter:
+        progid:DXImageTransform.Microsoft.gradient(startColorStr=#FF22225C,endColorStr=#FFFFFFFF,GradientType=1);
+    
+    margin:0px; padding:0px;
+}
+
+.dim {
+    position:fixed; left:0px; right:0px; top:0px; bottom:0px; 
+    background:rgba(0,0,0,0.8); display:none;z-index: 99999;cursor: progress;
+}
+
+/* IDs */
+
+#message {
+    position:absolute;
+    top:70px;bottom:0px;left:0px;right:0px;
+}
+#message #text {
+    text-align:center;
+    background:#22225C; color:white;
+    width:50%; height:200px; top:50%; margin-top:-100px;
+    left:25%; position: relative; border:solid 2px #007ACC;
+    border-radius: 32px 32px; text-shadow: 0px 0px 8px black;
+}
+#message #text h1 {
+    margin-top:0px;
+}
+
+#taskbar, #title {z-index: 100;}
+
+#qPanel {
+    position: fixed;
+    bottom:128px; top:0px; left:0px; right:0px;
+}
+
+#welcomeContainer {   
+/*    background-color: #22225C;*/
+    background-color: #10397A;
+    text-align: center; color:white;
+    height: 20%; min-height: 128px; min-width: 600px;
+}
+#welcomePage, #welcomePageMsg {}
+#welcomePage #welcomeLogo img, #welcomePage #welcomeSecondLogo img {
+    width:200px; height: 64px; float:left; margin-left:5px;
+}
+#welcomePage #logoContainer {
+    position:absolute; top:16px; left:1%;
+}
+
+#welcomePage h1 {
+    margin:0px;padding-top:1%;padding-bottom:1%;
+}
+#welcomePageMsg p {margin:0px;padding-bottom:2%;}
+
+#welcomeFooter {
+    position:fixed; bottom:10px; left:0px; right:0px;
+    max-height:64px; text-align: center;
+}
+#welcomeFooter #version {width: 20%;float:left;}
+#welcomeFooter #copyrights {width:60%;float:left;}
+#welcomeFooter #langOption {width:20%;float:left;}
+
+
+/* USER INFO STYLE */
+
+#userInfoContainer {
+    width:80%; top: 2em; height: 60%;
+    position:relative; left:50%;
+    margin-left:-40%;
+    /*background-color:#22225C; */
+}
+
+#userinfoPanel {
+    width:100%;height:100%;
+/*    background-color: #22225C;*/
+    background-color:#10397A;
+}
+
+#userInfoContainer #userPhoto {width:40%;}
+
+#userInfoContainer #userFullName {}
+
+#userInfoContainer #userFullName p {
+    text-align: center; margin:0px; font-size: xx-large; width:80%;
+    font-family: 'Segoe UI Semibold'; position:relative;
+    left:10%; color:white;
+}
+
+#userInfoContainer #infoCreds {width:70%; padding:2px; font-size: 90%;}
+#userInfoContainer #infoCreds table {width:100%;}
+#userInfoContainer #infoCreds th{width:50%;}
+#userInfoContainer td#userCreds {width:40%; vertical-align: top;}
+#userInfoContainer #infoCreds p {
+    margin:0px;padding-bottom:4px;padding-left: 8px;
+    font-weight: bold; color:white; text-align: center;
+}
+
+#userInfoContainer th {text-align:left; width:50%;color:white;}
+#userInfoContainer td {color:white;}
+
+#userInfoContainer #cardInfo {width:50%;height:45%;}
+#userInfoContainer #resCreds {width:40%;height:45%;}
+#userInfoContainer #examCreds {width:50%;height:45%;}
+
+
+#startBtnDiv {
+    position: relative; left:0px; right:0px; top:3em;
+}
+#startBtnDiv p {
+    margin-left: -150px; width: 300px; margin-top: 0px; position:relative;
+    text-align:center; color:white; left:50%; height:48px;
+}
+#startexamform button {
+    width: 64px; height: 64px; position:relative; left:50%; top:50%;
+    margin-left: -32px; margin-top:-32px;
+}
+#startexamform button span {
+    background: url('metro/icons/ignore-start.png') no-repeat 0px 0px; width:49px; height:49px; display:block;
+}
+
+.dialog {
+    position: fixed; width: 50%; height: 350px; 
+    margin-left: -25%; margin-top: -175px;
+    left: 50%; top: 50%; /*background-color: #22225C;*/ color: white;
+    background-color: #10397A;
+}
+
+.dialog input[type='text'] {width:80%;text-align:center;font-size:15pt;}
+
+#settingsForm h1 {
+    text-align: center;font-family: 'Segoe UI Semibold';
+    font-size:xx-large;letter-spacing: 1px;margin-top:0px;
+}
+#settingsForm table {
+    width:100%;height:200px;position:absolute;
+}
+#settingsForm th {}
+#settingsForm td {width:60%;}
+#settingsForm #okbtn {
+    position:absolute;bottom:0px;left:0px;right:0px;text-align:center;
+}
+#settingsForm button span {
+    display:block;left:50%;margin-left:-24px;position:relative;
+    background: url('metro/icons/submit.png') no-repeat 0px 0px; 
+    width:49px; height: 49px;
+}
+
+#taskbar
+{
+    position: fixed; /*background-color: #22225C;*/ color: white;
+    background-color: #10397A;
+    display:none;
+}
+
+#taskbarContainer{
+    padding:0px;margin:0px; 
+    position:absolute; top:4px; bottom:4px; left:50%; right:0.5%;
+}
+
+#taskbarContainer input[type='text']{cursor:default;}
+
+#timeText {
+    font-size: 35pt;
+}
+
+@media screen and (max-width:1280px) {
+    #timeText {font-size: 25pt;}
+    #welcomePage #welcomeLogo img, #welcomePage #welcomeSecondLogo img 
+    {width:150px;height:48px}
+}
+
+/*
+ * TOP PANEL 
+ */
+#topPanel{width:100%;float:right;}
+
+#topPanel span:not(.fadeLine) {
+    width:25%;font-size:18px;float:left;display:block;text-align:center;
+}
+#topPanel .fadeLine {clear:left;}
+#topPanel #computerName {overflow-style: marquee; overflow: auto;}
+
+/*
+ * MID PANEL
+ */
+#midPanel{width:100%;float:right;margin-top: 2%;}
+
+#buttonsContainer table {width:100%;}
+#buttonsContainer td {height:64px;width:10%;text-align:center;}
+#buttonsContainer button {margin:0px;padding:0px;}
+#buttonsContainer button span {height:49px;width:49px;display:block;left:50%;margin-left:-24px;position:relative;}
+
+#buttonsContainer #helpBtn span {background: url('metro/icons/help.png') no-repeat 0px 0px;}
+#buttonsContainer #exitBtn span {background: url('metro/icons/exit.png') no-repeat 0px 0px;}
+#buttonsContainer #clearBtn span {background: url('metro/icons/refresh.png') no-repeat 0px 0px;}
+#buttonsContainer #ignoreBtn span {background: url('metro/icons/ignore-start.png') no-repeat 0px 0px;}
+#buttonsContainer #submitBtn span {background: url('metro/icons/submit.png') no-repeat 0px 0px;}
+#buttonsContainer #finishBtn span {background: url('metro/icons/submit.png') no-repeat 0px 0px;}
+
+#tooltip {
+    position:absolute; top:4px; left:0.5%; right:50%; bottom:4px;
+    color:black; background-color:white; 
+    overflow-style: scrollbar; overflow: auto; 
+    border:solid 1px;
+}
+#tooltip p {margin:8px;}
+
+
+/* Move Taskbar Classes*/
+.task_bottom {bottom: 0px; left: 0px; right: 0px; height: 128px;;}
+
+.task_left {bottom: 0px; left: 0px; top: 0px; width: 128px;}
+
+.task_top {top:0px; left:0px; right:0px; height: 128px}
+
+.task_right {right:0px; top:0px; bottom:0px; width: 128px;}

@@ -1,0 +1,16 @@
+#buttonsContainer button
+{
+    width:60px;
+}
+#settingsForm button {
+    padding:10px;
+}
+#midPanel{width:95%;}
+#topPanel span {
+    width:25%;font-size:18px;float:left;display:block;text-align:center;
+}
+#taskbar .fadeLine{display:none;}
+#userCreds .fadeLine{display:none;}
+#taskbar #timeText {font-size: 25pt;}
+#taskbar {bottom:6px;}
+

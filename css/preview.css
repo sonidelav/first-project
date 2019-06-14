@@ -1,0 +1,16 @@
+.xdebug-error {
+    position:relative;
+    z-index:2000;
+    color:black;
+}
+
+
+.taskdim {
+    position:absolute;
+    left:0px;right:0px;top:0px;bottom:0px;
+    z-index: 9999;
+}
+
+#midPanel, #timeText, #topPanel {
+   opacity: 0.4;
+}
